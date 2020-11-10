@@ -4,16 +4,20 @@ import MainLayout from '../components/layouts/mainlayout'
 
 
 class Home extends Component {
-    static async getInitialProps(){
+    static async getInitialProps({pathname, query, asPath, req, res }){
         let userData;
         try{
             const response = await axios.get('https://jsonplaceholder.typicode.com/users/1')
             userData = response.data;
-            console.log(userData)
+            // console.log(userData)
 
         } catch{
             console.log('error')
         }
+
+        // console.log(pathname);
+        // console.log(query);
+        console.log(req);
 
         // console.log('Initial Props');
         return {
@@ -37,7 +41,7 @@ class Home extends Component {
     }
 
     render(){
-        console.log(this.state);
+        // console.log(this.state);
         return(
             <>
                 <MainLayout>
