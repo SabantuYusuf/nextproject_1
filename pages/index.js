@@ -1,6 +1,9 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
 import MainLayout from '../components/layouts/mainlayout'
+// import '../styles/main.css';
+import Style from '../styles/main.css';
+// use css as module 
 
 
 class Home extends Component {
@@ -45,7 +48,7 @@ class Home extends Component {
         return(
             <>
                 <MainLayout>
-                    <h1>Welcome to my page</h1>
+                    <h1 className={Style.superAwesome}>Welcome to my page</h1>
                 </MainLayout>
             </>
         )
