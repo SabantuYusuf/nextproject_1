@@ -17,7 +17,7 @@ class Home extends Component {
 
         // console.log(pathname);
         // console.log(query);
-        console.log(req);
+        // console.log(req);
 
         // console.log('Initial Props');
         return {
